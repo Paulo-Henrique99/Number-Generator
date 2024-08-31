@@ -1,4 +1,4 @@
-
+/* Estilo base (não altera a versão para desktop) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
@@ -19,7 +19,7 @@ body {
 .container {
     background-color: #343439;
     padding: 30px 40px;
-    min-width: 470px;
+    min-width: 470px; /* Mantém para desktops */
     color: #efefef;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.389);
     border-radius: 12px;
@@ -28,8 +28,8 @@ body {
     align-items: center;
 }
 
-.container h2{
-    font-size: 30px;
+.container h2 {
+    font-size: 30px; /* Mantém para desktops */
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -37,7 +37,7 @@ body {
 .input-group {
     display: flex;
     padding: 20px 0px;
-    gap: 50px;
+    gap: 50px; /* Mantém para desktops */
 }
 
 .input-field {
@@ -48,14 +48,14 @@ body {
 .input-field label {
     font-weight: bold;
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 18px; /* Mantém para desktops */
 }
 
 .input-field input {
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #7336ff;
-    font-size: 18px;
+    font-size: 18px; /* Mantém para desktops */
     border-radius: 2px;
     padding: 5px;
     color: #fff;
@@ -63,7 +63,7 @@ body {
 
 .input-field input:focus {
     outline: none;
-    border-bottom: 3px solid#7336ff;
+    border-bottom: 3px solid #7336ff;
 }
 
 #generate {
@@ -75,12 +75,70 @@ body {
     margin: 20px 0px;
     color: #fff;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 18px; /* Mantém para desktops */
     cursor: pointer;
 }
 
 #result {
-    font-size: 50px;
+    font-size: 50px; /* Mantém para desktops */
     font-weight: 600;
 }
 
+/* Consultas de mídia para dispositivos móveis */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Ajusta o padding para telas menores */
+        min-width: auto; /* Remove o mínimo de largura para se ajustar melhor */
+    }
+
+    .container h2 {
+        font-size: 24px; /* Ajusta o tamanho da fonte do título */
+    }
+
+    .input-group {
+        flex-direction: column; /* Empilha os campos verticalmente */
+        gap: 20px; /* Ajusta o espaço entre os campos */
+    }
+
+    .input-field label {
+        font-size: 16px; /* Ajusta o tamanho da fonte dos rótulos */
+    }
+
+    .input-field input {
+        font-size: 16px; /* Ajusta o tamanho da fonte dos campos de entrada */
+    }
+
+    #generate {
+        font-size: 16px; /* Ajusta o tamanho da fonte do botão */
+    }
+
+    #result {
+        font-size: 40px; /* Ajusta o tamanho da fonte do resultado */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px; /* Ajusta o padding para telas muito pequenas */
+    }
+
+    .container h2 {
+        font-size: 20px; /* Ajusta o tamanho da fonte do título */
+    }
+
+    .input-field label {
+        font-size: 14px; /* Ajusta o tamanho da fonte dos rótulos */
+    }
+
+    .input-field input {
+        font-size: 14px; /* Ajusta o tamanho da fonte dos campos de entrada */
+    }
+
+    #generate {
+        font-size: 14px; /* Ajusta o tamanho da fonte do botão */
+    }
+
+    #result {
+        font-size: 30px; /* Ajusta o tamanho da fonte do resultado */
+    }
+}
